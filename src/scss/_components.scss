@@ -144,7 +144,7 @@
             }
         }
     }
-    .navigation {
+    .main-nav {
         @include make-col-ready;
 
         ul {
@@ -165,7 +165,7 @@
 
         a {
             display: block;
-            border-bottom: solid 3px transparent;
+            //border-bottom: solid 3px transparent;
 
             &:hover {
                 text-decoration: none;
