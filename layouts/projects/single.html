@@ -36,9 +36,9 @@
 <div class="next-project">
     <div class="content">
         {{ if .PrevInSection }}
-        <a href="{{ .PrevInSection.RelPermalink }}" class="btn btn-primary btn-lg btn-block" role="button">Next: {{ .PrevInSection.Title }}</a>
+        <a href="{{ .PrevInSection.RelPermalink }}" class="btn btn-block" role="button">Next: {{ .PrevInSection.Title }}</a>
         {{ else }}
-        <a href="/" class="btn-lg">Back to All Projects</a>
+        <a href="/">Back to All Projects</a>
         {{ end }}
     </div>
 </div>

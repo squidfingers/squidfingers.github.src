@@ -15,3 +15,41 @@
     clip-path: inset(50%);
     border: 0;
 }
+
+@mixin make-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: $btn-text-color;
+    background-color: $btn-bg-color;
+    border-radius: 4rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    transition: background-color .1s ease-in-out;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        color: $btn-text-color;
+        background-color: $btn-bg-hover-color;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: $btn-text-color;
+        background-color: $btn-bg-active-color;
+    }
+
+    &.btn-block {
+        display: block;
+        width: 100%;
+    }
+}
+
+@mixin make-btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: $font-size-large;
+    font-weight: $font-weight-normal;
+}

@@ -1,40 +1,10 @@
 /* Buttons */
 
 .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: $btn-text-color;
-    background-color: $btn-bg-color;
-    border-radius: 4rem;
-    white-space: nowrap;
-    vertical-align: middle;
-    text-align: center;
-    transition: background-color .1s ease-in-out;
-
-    &:focus {
-        outline: 0;
-    }
-
-    &:hover {
-        color: $btn-text-color;
-        background-color: $btn-bg-hover-color;
-        text-decoration: none;
-    }
-
-    &:active {
-        color: $btn-text-color;
-        background-color: $btn-bg-active-color;
-    }
-
-    &.btn-block {
-        display: block;
-        width: 100%;
-    }
+    @include make-btn;
 
     &.btn-lg {
-        padding: 1rem 1.5rem;
-        font-size: $font-size-large;
-        font-weight: $font-weight-normal;
+        @include make-btn-lg;
     }
 }
 
@@ -497,6 +467,11 @@
         @include make-col-ready;
         padding-top: spacer(5);
         text-align: center;
+    }
+    @include media-breakpoint-up(sm) {
+        .btn {
+            @include make-btn-lg;
+        }
     }
 }
 
