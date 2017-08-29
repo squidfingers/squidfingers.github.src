@@ -1,0 +1,15 @@
+<div class="latest-update">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                {{ range first 1 (where .Data.Pages "Section" "updates") }}
+                    <h5 class="date">
+                        <a href="{{ .RelPermalink }}">{{ .Date.Format .Site.Params.datetimeFormat }}</a>
+                    </h5>
+                    {{ .Content }}
+                {{ end }}
+                <a href="/updates/">More updates</a>
+            </div>
+        </div>
+    </div>
+</div>

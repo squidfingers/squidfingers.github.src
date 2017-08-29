@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ with .Title }}{{ . }} / {{ end }}{{ .Site.Title }}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link href="/css/app.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <header class="page-header{{ if and (eq .Type "projects") (eq .Kind "page") }} condensed{{ end }}">
+            <div class="container">
+                <div class="row">
+                    <div class="brand">
+                        <h1>
+                            <a href="/">
+                                <span class="name">Travis Beckham</span>
+                                <span class="role">UX/UI</span>
+                            </a>
+                        </h1>
+                    </div>
+                    <nav class="navigation">
+                        <ul>
+                            <li>
+                                <a href="/" class="projects{{ if or .IsHome (eq .Type "projects") }} selected{{ end }}">Projects</a>
+                            </li>
+                            <li>
+                                <a href="/about/" class="about{{ if eq .Type "about" }} selected{{ end }}">About</a>
+                            </li>
+                            <li>
+                                <a href="/history/" class="history{{ if eq .Type "history" }} selected{{ end }}">History</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="page-main">
+            <div class="container">
+                {{ block "main" . }}
+                {{ end }}
+            </div>
+        </main>
+
+        {{ if .IsHome }}
+        {{ partial "latest_update" . }}
+        {{ end }}
+
+        <div class="contact-btn">
+            {{ partial "email_link" (dict "content" "<svg data-src=\"/img/email.svg\"></svg>" ) }}
+        </div>
+
+        <script type="text/javascript" src="/js/svg-injector.min.js"></script>
+        <script type="text/javascript">
+            new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
+        </script>
+
+        {{ partial "analytics" . }}
+    </body>
+</html>

@@ -1,0 +1,48 @@
+// Colors
+
+$primary:                       #1eb6ff;
+$secondary:                     #f5de41;
+$neutral:                       #1c1e26;
+$neutral-lighter:               #232630;
+$neutral-lightest:              #2c303d;
+
+$white:                         #fff;
+$white-90:                      #e8e8e9;
+$white-80:                      #d2d3d5;
+$white-50:                      #8f9196;
+
+$body-bg-color:                 $neutral;
+$text-color:                    $white-80;
+$header-color:                  $white;
+
+$link-color:                    $primary;
+$link-hover-color:              lighten($primary, 8%);
+$link-active-color:             lighten($primary, 16%);
+
+$blockquote-bg-color:           $neutral-lighter;
+$blockquote-border-color:       $secondary;
+$blockquote-footer-text-color:  $secondary;
+
+// Typography
+
+$font-family-base:              Interface, Helvetica, Arial, sans-serif;
+
+$font-size-base:                1rem;
+$font-size-large:               1.3rem;
+$font-size-small:               0.75rem;
+
+$font-weight-normal:            400;
+$font-weight-bold:              700;
+
+$line-height-base:              1.6;
+
+// Spacer
+
+$spacer:                        1.2rem;
+
+// Components
+
+$btn-bg-color:                  $primary;
+$btn-bg-hover-color:            lighten($primary, 8%);
+$btn-bg-active-color:           lighten($primary, 16%);
+$btn-text-color:                $white;

@@ -1,0 +1,32 @@
+<div class="project-category featured">
+    <h3>
+        Featured Projects
+    </h3>
+    {{ with .Site.Taxonomies.categories.featured}}
+        {{ partial "project_category.html" . }}
+    {{ end }}
+</div>
+<div class="project-category recent">
+    <h3>
+        Other Recent Projects
+    </h3>
+    {{ with .Site.Taxonomies.categories.recent}}
+        {{ partial "project_category.html" . }}
+    {{ end }}
+</div>
+<div class="project-category archive">
+    <h3>
+        Older Projects <span>that I still find interesting</span>
+    </h3>
+    {{ with .Site.Taxonomies.categories.archive}}
+        {{ partial "project_category.html" . }}
+    {{ end }}
+</div>
+<div class="project-category illustration">
+    <h3>
+        Illustration
+    </h3>
+    {{ with .Site.Taxonomies.categories.illustration}}
+        {{ partial "project_category.html" . }}
+    {{ end }}
+</div>

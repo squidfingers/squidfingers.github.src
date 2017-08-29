@@ -1,0 +1,9 @@
+---
+baseURL: "http://travisbeckham.com/"
+title: "Travis Beckham"
+params:
+  googleAnalytics: "UA-170525-4"
+  projectImgDir: "/img/projects/"
+  thumbnailBaseName: "tn"
+  datetimeFormat: "Jan 2, 2006 @ 3:04pm"
+...

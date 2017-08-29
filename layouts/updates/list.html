@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<div class="updates">
+    {{ range .Data.Pages }}
+    <div class="update">
+        {{ .Content }}
+        <h5 class="date">
+            <a href="{{ .RelPermalink }}">{{ .Date.Format .Site.Params.datetimeFormat }}</a>
+        </h5>
+    </div>
+    {{ end }}
+</div>
+
+{{ end }}
