@@ -465,7 +465,7 @@
 
     > .content {
         @include make-col-ready;
-        padding-top: spacer(5);
+        padding-top: spacer(3);
         text-align: center;
     }
     @include media-breakpoint-up(sm) {

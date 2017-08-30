@@ -9,3 +9,30 @@
 .border {
     border: solid 1px rgba(0,0,0,0.2);
 }
+
+/*
+Adapted from bootstrap/scss/utilities/_spacing.scss
+Breakpoint classes disabled
+*/
+//@each $breakpoint in map-keys($grid-breakpoints) {
+    //@include media-breakpoint-up($breakpoint) {
+        $infix: "";//breakpoint-infix($breakpoint, $grid-breakpoints);
+        @each $prop, $abbrev in (margin: m, padding: p) {
+            @for $i from 0 to 3 {
+                .#{$abbrev}#{$infix}-#{$i}   { #{$prop}:        spacer($i) !important; }
+                .#{$abbrev}-t#{$infix}-#{$i} { #{$prop}-top:    spacer($i) !important; }
+                .#{$abbrev}-r#{$infix}-#{$i} { #{$prop}-right:  spacer($i) !important; }
+                .#{$abbrev}-b#{$infix}-#{$i} { #{$prop}-bottom: spacer($i) !important; }
+                .#{$abbrev}-l#{$infix}-#{$i} { #{$prop}-left:   spacer($i) !important; }
+                .#{$abbrev}-x#{$infix}-#{$i} {
+                    #{$prop}-right: spacer($i) !important;
+                    #{$prop}-left:  spacer($i) !important;
+                }
+                .#{$abbrev}-y#{$infix}-#{$i} {
+                    #{$prop}-top:    spacer($i) !important;
+                    #{$prop}-bottom: spacer($i) !important;
+                }
+            }
+        }
+    //}
+//}
