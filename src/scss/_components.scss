@@ -3,6 +3,9 @@
 .btn {
     @include make-btn;
 
+    &.btn-block {
+        @include make-btn-block;
+    }
     &.btn-lg {
         @include make-btn-lg;
     }
@@ -468,9 +471,15 @@
         padding-top: spacer(3);
         text-align: center;
     }
+    .next-project-btn {
+        @include make-btn;
+        @include make-btn-lg;
+        @include make-btn-block;
+        font-size: $font-size-base;
+    }
     @include media-breakpoint-up(sm) {
-        .btn {
-            @include make-btn-lg;
+        .next-project-btn {
+            font-size: $font-size-large;
         }
     }
 }
