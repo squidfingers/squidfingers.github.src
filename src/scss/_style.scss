@@ -164,3 +164,23 @@ blockquote {
         content: "";
     }
 }
+
+pre {
+    padding: spacer(1);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+code {
+    color: $white-50;
+    .str { color: $white-80; }  /* string content */
+    .kwd { color: $white-80; }  /* keyword */
+    .com { color: $white-80; }  /* comment */
+    .typ { color: $white-80; }  /* type name */
+    .lit { color: $white-80; }  /* literal value */
+    .pun { color: $white-80; }  /* punctuation */
+    .tag { color: $white-80; }  /* markup tag name */
+    .atn { color: $white-80; }  /* markup attribute name */
+    .atv { color: $white-80; }  /* markup attribute value */
+    .var { color: $secondary; } /* variable name */
+    .fun { color: $white-80; }  /* function name */
+}
