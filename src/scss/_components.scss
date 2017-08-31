@@ -61,7 +61,15 @@
 /* Bootstrap's Fluid Container */
 
 .container-fluid {
-    max-width: 1280px;
+    max-width: 1300px;
+    @include media-breakpoint-up(sm) {
+        padding-right: $grid-gutter-width;
+        padding-left: $grid-gutter-width;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-right: ($grid-gutter-width * 2);
+        padding-left: ($grid-gutter-width * 2);
+    }
 }
 
 /* Page Header */
