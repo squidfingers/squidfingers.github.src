@@ -1,0 +1,7 @@
+{{ if .Params.tags }}
+<ul class="tag-list">
+    {{ range .Params.tags }}
+        <li>{{ . }}</li>
+    {{ end }}
+</ul>
+{{ end }}

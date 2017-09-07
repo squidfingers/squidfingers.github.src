@@ -11,6 +11,23 @@
     }
 }
 
+/* Tag List */
+
+.tag-list {
+    display: flex;
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+        margin-right: 0.2rem;
+        padding: 0 0.6rem;
+        background-color: $neutral-lightest;
+        color: $neutral;
+        border-radius: $font-size-small;
+        font-size: $font-size-small;
+    }
+}
+
 /* Pager */
 
 .pager {
@@ -34,7 +51,7 @@
     }
 
     polygon {
-        fill: $neutral-lightest;
+        fill: $neutral-light;
     }
 
     a {
@@ -239,7 +256,7 @@
         color: $secondary;
     }
     .more-updates {
-        border-top: solid 3px $neutral-lightest;
+        border-top: solid 3px $neutral-light;
         margin-top: spacer(1);
         padding-top: spacer(0.5);
         font-size: $font-size-small;
@@ -274,15 +291,16 @@
     @include make-row;
     justify-content: center;
 
-    h5 {
+    .date {
+        margin-bottom: spacer(0.5);
         color: $white-50;
-        font-size: $font-size-base;
+        font-size: $font-size-small;
     }
     > .update {
         @include make-col-ready;
         margin-bottom: spacer(2);
         padding-bottom: spacer(1);
-        border-bottom: solid 3px $neutral-lightest;
+        border-bottom: solid 3px $neutral-light;
 
         @include media-breakpoint-up(md) {
             @include make-col(10);
@@ -558,7 +576,7 @@
     @include make-row;
     padding-top: spacer(4);
     padding-bottom: spacer(3);
-    border-top: solid 3px $neutral-lightest;
+    border-top: solid 3px $neutral-light;
 
     &:first-child {
         padding-top: 0;

@@ -6,6 +6,7 @@
         <h5 class="date">
             {{ .Date.Format .Site.Params.datetimeFormat }}
         </h5>
+        {{ partial "tag_list.html" . }}
     </div>
 </div>
 
