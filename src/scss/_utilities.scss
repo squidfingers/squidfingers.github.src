@@ -36,6 +36,12 @@ Adapted from bootstrap/scss/utilities/_spacing.scss
     //}
 //}
 
+.m-grid-gutter   { margin:        $grid-gutter-width !important; }
+.m-t-grid-gutter { margin-top:    $grid-gutter-width !important; }
+.m-r-grid-gutter { margin-right:  $grid-gutter-width !important; }
+.m-b-grid-gutter { margin-bottom: $grid-gutter-width !important; }
+.m-l-grid-gutter { margin-left:   $grid-gutter-width !important; }
+
 /*
 Copied from bootstrap/scss/utilities/_display.scss
 */
