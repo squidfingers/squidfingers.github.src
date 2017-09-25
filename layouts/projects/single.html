@@ -5,16 +5,16 @@
         <ul>
             <li class="previous">
                 {{ if .NextInSection }}
-                <a id="previousPage" href="{{ .NextInSection.RelPermalink }}" title="{{ safeHTMLAttr .NextInSection.Title }}"><svg data-src="/img/arrow-left.svg"></svg></a>
+                <a id="previousPage" href="{{ .NextInSection.RelPermalink }}" title="{{ safeHTMLAttr .NextInSection.Title }}"><svg data-src="/img/ui/arrow-left.svg"></svg></a>
                 {{ else }}
-                <svg data-src="/img/arrow-left.svg"></svg>
+                <svg data-src="/img/ui/arrow-left.svg"></svg>
                 {{ end }}
             </li>
             <li class="next">
                 {{ if .PrevInSection }}
-                <a id="nextPage" href="{{ .PrevInSection.RelPermalink }}" title="{{ safeHTMLAttr .PrevInSection.Title }}"><svg data-src="/img/arrow-right.svg"></svg></a>
+                <a id="nextPage" href="{{ .PrevInSection.RelPermalink }}" title="{{ safeHTMLAttr .PrevInSection.Title }}"><svg data-src="/img/ui/arrow-right.svg"></svg></a>
                 {{ else }}
-                <svg data-src="/img/arrow-right.svg"></svg>
+                <svg data-src="/img/ui/arrow-right.svg"></svg>
                 {{ end }}
             </li>
         </ul>
