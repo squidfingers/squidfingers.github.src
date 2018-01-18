@@ -1,2 +1,1 @@
-Bootstrap v4.0.0-beta
-Updated from the v4-dev branch on 2017-09-08
+Bootstrap v4.0.0
