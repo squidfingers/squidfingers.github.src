@@ -1,17 +1,11 @@
 <div class="latest-update">
     <div class="container-fluid">
-        <div class="row">
-            <div class="content">
-                {{ range first 1 (where .Data.Pages "Section" "updates") }}
-                    <h5 class="date">
-                        <a href="{{ .RelPermalink }}">{{ .Date.Format .Site.Params.datetimeFormat }}</a>
-                    </h5>
-                    {{ .Content }}
-                    {{ partial "tag_list.html" . }}
-                {{ end }}
-                <div class="more-updates">
-                    <a href="/updates/">More updates</a>
-                </div>
+        <div class="updates">
+            {{ range first 1 (where .Data.Pages "Section" "updates") }}
+            {{ .Render "update" }}
+            {{ end }}
+            <div class="more-updates">
+                <a href="/updates/">More Updates</a>
             </div>
         </div>
     </div>

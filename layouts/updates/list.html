@@ -2,13 +2,7 @@
 
 <div id="updates" class="updates">
     {{ range .Paginator.Pages }}
-    <div class="update">
-        {{ .Content }}
-        <h5 class="date">
-            <a href="{{ .RelPermalink }}">{{ .Date.Format .Site.Params.datetimeFormat }}</a>
-        </h5>
-        {{ partial "tag_list.html" . }}
-    </div>
+    {{ .Render "update" }}
     {{ end }}
 </div>
 

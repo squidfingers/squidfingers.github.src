@@ -101,7 +101,7 @@ div.paginator {// created by paginator.js
     .loader,
     .done {
         display: block;
-        padding: 1rem 1.5rem;
+        padding: spacer(1) spacer(1.5);
         font-size: $font-size-large;
         text-align: center;
     }
@@ -282,35 +282,14 @@ div.paginator {// created by paginator.js
     padding: spacer(5) 0;
     background-color: $neutral-lighter;
 
-    .date {
-        color: $secondary;
-    }
     .more-updates {
-        border-top: solid 3px $neutral-light;
-        margin-top: spacer(1);
-        padding-top: spacer(0.5);
-        font-size: $font-size-small;
-    }
-    .row {
-        //@include make-row;
-        justify-content: center;
+        @include make-col-ready;
 
-        > .content {
-            @include make-col-ready;
-
-            @include media-breakpoint-up(sm) {
-                p {
-                    font-size: $font-size-large;
-                }
-            }
-
-            @include media-breakpoint-up(md) {
-                @include make-col(10);
-            }
-
-            @include media-breakpoint-up(xl) {
-                @include make-col(8);
-            }
+        a {
+            display: block;
+            padding: spacer(1) spacer(1.5);
+            font-size: $font-size-large;
+            text-align: center;
         }
     }
 }
@@ -321,11 +300,6 @@ div.paginator {// created by paginator.js
     @include make-row;
     justify-content: center;
 
-    .date {
-        margin-bottom: spacer(0.5);
-        color: $white-50;
-        font-size: $font-size-small;
-    }
     > .update {
         @include make-col-ready;
         margin-bottom: spacer(2);
@@ -339,6 +313,11 @@ div.paginator {// created by paginator.js
         @include media-breakpoint-up(xl) {
             @include make-col(8);
         }
+    }
+    .date {
+        margin-bottom: spacer(0.5);
+        color: $white-50;
+        font-size: $font-size-small;
     }
 }
 
