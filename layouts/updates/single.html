@@ -1,13 +1,7 @@
 {{ define "main" }}
 
 <div class="updates">
-    <div class="update">
-        {{ .Content }}
-        <h5 class="date">
-            {{ .Date.Format .Site.Params.datetimeFormat }}
-        </h5>
-        {{ partial "tag_list.html" . }}
-    </div>
+    {{ .Render "update" }}
 </div>
 
 {{ end }}

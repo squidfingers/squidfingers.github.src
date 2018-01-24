@@ -2,6 +2,7 @@
 baseURL: "http://travisbeckham.com/"
 title: "Travis Beckham"
 publishDir: "../squidfingers.github.io"
+paginate: 10
 params:
   googleAnalytics: "UA-170525-4"
   projectImgDir: "/img/projects/"
