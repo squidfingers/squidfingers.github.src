@@ -47,6 +47,22 @@
     }
 }
 
+@mixin make-btn-disabled {
+    cursor: default;
+    color: $btn-text-color-disabled;
+    background-color: $btn-bg-color-disabled;
+
+    &:hover {
+        color: $btn-text-color-disabled;
+        background-color: $btn-bg-color-disabled;
+    }
+
+    &:active {
+        color: $btn-text-color-disabled;
+        background-color: $btn-bg-color-disabled;
+    }
+}
+
 @mixin make-btn-block {
     display: block;
     width: 100%;
