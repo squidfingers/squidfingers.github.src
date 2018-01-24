@@ -97,16 +97,11 @@ ul.paginator {// fallback
     }
 }
 div.paginator {// created by paginator.js
-    .more {
-        @include make-btn;
-        @include make-btn-lg;
-        @include make-btn-block;
-    }
+    .more,
     .loader,
-    .done {// match .btn to prevent page jump
+    .done {
         display: block;
         padding: 1rem 1.5rem;
-        vertical-align: middle;
         font-size: $font-size-large;
         text-align: center;
     }
