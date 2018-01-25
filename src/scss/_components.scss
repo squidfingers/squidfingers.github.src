@@ -276,24 +276,6 @@ div.paginator {// created by paginator.js
     }
 }
 
-/* Latest Update */
-
-.latest-update {
-    padding: spacer(5) 0;
-    background-color: $neutral-lighter;
-
-    .more-updates {
-        @include make-col-ready;
-
-        a {
-            display: block;
-            padding: spacer(1) spacer(1.5);
-            font-size: $font-size-large;
-            text-align: center;
-        }
-    }
-}
-
 /* Updates */
 
 .updates {
@@ -314,10 +296,14 @@ div.paginator {// created by paginator.js
             @include make-col(8);
         }
     }
+
     .date {
         margin-bottom: spacer(0.5);
-        color: $white-50;
         font-size: $font-size-small;
+
+        a {
+            color: $neutral-lightest;
+        }
     }
 }
 
@@ -338,6 +324,37 @@ div.paginator {// created by paginator.js
             @include media-breakpoint-up(xl) {
                 @include make-col(8);
             }
+        }
+    }
+}
+
+/* Latest Update */
+
+.latest-update {
+    padding: spacer(5) 0;
+    background-color: $neutral-lighter;
+
+    .updates {
+        > .update {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date {
+            order: -1;
+            margin-bottom: spacer(1);
+            font-size: $font-size-large;
+        }
+    }
+
+    .more-updates {
+        @include make-col-ready;
+
+        a {
+            display: block;
+            padding: spacer(1) spacer(1.5);
+            font-size: $font-size-large;
+            text-align: center;
         }
     }
 }
