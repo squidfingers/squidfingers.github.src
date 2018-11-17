@@ -198,6 +198,9 @@ div.paginator {// created by paginator.js
             &:first-of-type {
                 margin-left: 0;
             }
+            &:last-of-type {// Hide Updates in nav until I have time to build a toggle menu.
+                display: none;
+            }
         }
 
         a {
@@ -211,6 +214,14 @@ div.paginator {// created by paginator.js
             &.selected {
                 color: $white;
                 //border-color: $neutral;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {// Show Updates on large viewports. Better than nothing.
+            li {
+                &:last-of-type {
+                    display: block;
+                }
             }
         }
 
