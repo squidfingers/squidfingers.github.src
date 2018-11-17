@@ -107,10 +107,11 @@ div.paginator {// created by paginator.js
     }
 }
 
-/* Bootstrap's Fluid Container */
+/* Extend Bootstrap's Fluid Container */
 
 .container-fluid {
     max-width: 1300px;
+    // increase gutter width on larger breakpoints
     @include media-breakpoint-up(sm) {
         padding-right: $grid-gutter-width;
         padding-left: $grid-gutter-width;
@@ -123,22 +124,48 @@ div.paginator {// created by paginator.js
 
 /* Page Header */
 
+$toggle-menu-breakpoint: 'lg';
+
 .page-header {
-    padding: spacer(3) 0;
+    padding-bottom: spacer(3);
     background-color: $neutral-lighter;
+
+    @include media-breakpoint-up($toggle-menu-breakpoint) {
+        padding: spacer(3) 0;
+    }
+
+    .container-fluid {
+        @include media-breakpoint-down(md) {// one breakpoint down from $toggle-menu-breakpoint
+            // reset to Bootstrap's default so the main-nav's background color will go to the edge of the viewport.
+            padding-right: ($grid-gutter-width / 2);
+            padding-left: ($grid-gutter-width / 2);
+        }
+    }
 
     .row {
         align-items: center;
+        flex-direction: column-reverse;// pull main-nav above brand
+
+        @include media-breakpoint-up($toggle-menu-breakpoint) {
+            flex-direction: row;// return to regular flow
+        }
     }
 
     .brand {
         @include make-col-ready;
 
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0;
+            padding-top: spacer(3);
+        }
+
         a {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            text-align: center;
+            text-align: left;
             color: $header-color;
 
             &:hover {
@@ -158,34 +185,40 @@ div.paginator {// created by paginator.js
             font-size: $font-size-base;
         }
 
-        @include media-breakpoint-down(sm) {
-            .role {
-                @include make-sr-only;
+        @include media-breakpoint-up(sm) {
+            a {// display logo
+                padding-left: 70px;
+                min-height: 50px;
+                background-image: url(/img/ui/logo.png);
+                background-repeat: no-repeat;
+                background-size: 50px 50px;
             }
         }
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up($toggle-menu-breakpoint) {
             @include make-col(8);
 
             h1 {
-                margin-bottom: 0;
+                padding-top: 0;
+                justify-content: left;
             }
-
-            a {
-                min-height: 100px;
+            a {// increase logo size
                 padding-left: 130px;
-                background-image: url(/img/ui/logo.png);
-                background-repeat: no-repeat;
+                min-height: 100px;
                 background-size: 100px 100px;
-                text-align: left;
             }
         }
     }
+
     .main-nav {
         @include make-col-ready;
+        padding-top: spacer(3);
+        padding-bottom: spacer(2);
+        background-color: $neutral-lightest;
 
         ul {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             margin-bottom: 0;
             padding-left: 0;
@@ -193,19 +226,12 @@ div.paginator {// created by paginator.js
         }
 
         li {
-            margin-left: $grid-gutter-width;
-
-            &:first-of-type {
-                margin-left: 0;
-            }
-            &:last-of-type {// Hide Updates in nav until I have time to build a toggle menu.
-                display: none;
-            }
+            margin-bottom: spacer(1);
         }
 
         a {
             display: block;
-            //border-bottom: solid 3px transparent;
+            text-align: center;
 
             &:hover {
                 text-decoration: none;
@@ -213,32 +239,43 @@ div.paginator {// created by paginator.js
 
             &.selected {
                 color: $white;
-                //border-color: $neutral;
             }
         }
 
-        @include media-breakpoint-up(lg) {// Show Updates on large viewports. Better than nothing.
-            li {
-                &:last-of-type {
-                    display: block;
-                }
-            }
-        }
-
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up($toggle-menu-breakpoint) {
             @include make-col(4);
 
+            // undo toggle menu
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: transparent;
+
             ul {
+                flex-direction: row;
                 justify-content: flex-end;
+            }
+            li {
+                margin-left: $grid-gutter-width;
+                margin-bottom: 0;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
             }
         }
     }
 
     &.condensed {
-        padding: spacer(1.6) 0;
+        padding-bottom: spacer(1.6);
+
+        @include media-breakpoint-up($toggle-menu-breakpoint) {
+            padding: spacer(1.6);
+        }
 
         .brand {
-            @include media-breakpoint-up(md) {
+            @include media-breakpoint-up($toggle-menu-breakpoint) {
                 a {
                     min-height: 70px;
                     padding-left: 90px;
@@ -246,6 +283,51 @@ div.paginator {// created by paginator.js
                 }
             }
         }
+
+        .brand {
+            h1 {
+                padding-top: spacer(1.6);
+
+                @include media-breakpoint-up($toggle-menu-breakpoint) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Menu Bar - Created by JavaScript (see menu.js) */
+
+.menu-bar {// Element created by JavaScript
+    // show menu bar on smaller breakpoints
+    display: block;
+    padding: spacer(0.5);
+    padding-left: spacer(1);
+    background-color: $primary;
+    a {
+        color: #fff;
+        text-decoration: none;
+        padding-left: 36px;
+        background-image: url(/img/ui/icon-menu.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 24px 24px;
+    }
+    // hide menu bar larger breakpoints
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.main-nav-toggle {// ClassName added to .main-nav by JavaScript
+    // hide main nav on smaller breakpoints
+    display: none;
+    &.show {// ClassName toggled by JavaScript
+        display: block;
+    }
+    @include media-breakpoint-up(lg) {
+        // show main nav on larger breakpoints
+        display: block;
     }
 }
 
