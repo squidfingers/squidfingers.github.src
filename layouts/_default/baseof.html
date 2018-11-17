@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <header class="page-header{{ if and (eq .Type "projects") (eq .Kind "page") }} condensed{{ end }}">
+        <header id="page-header" class="page-header{{ if and (eq .Type "projects") (eq .Kind "page") }} condensed{{ end }}">
             <div class="container-fluid">
                 <div class="row">
                     <div class="brand">
@@ -29,7 +29,7 @@
                             </a>
                         </h1>
                     </div>
-                    <nav class="main-nav">
+                    <nav id="main-nav" class="main-nav">
                         <ul>
                             <li>
                                 <a href="/"{{ if or .IsHome (eq .Type "projects") }} class="selected"{{ end }}>Projects</a>
@@ -64,6 +64,7 @@
             {{ partial "email_link" (dict "content" "<svg data-src=\"/img/ui/email.svg\"></svg>" ) }}
         </div>
 
+        <script type="text/javascript" src="/js/menu.js"></script>
         <script type="text/javascript" src="/js/svg-injector.min.js"></script>
         <script type="text/javascript">
             new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
