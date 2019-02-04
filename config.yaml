@@ -3,6 +3,7 @@ baseURL: "http://travisbeckham.com/"
 title: "Travis Beckham"
 publishDir: "../squidfingers.github.io"
 paginate: 10
+disableKinds: ["RSS","taxonomyTerm"]
 params:
   googleAnalytics: "UA-170525-4"
   projectImgDir: "/img/projects/"
