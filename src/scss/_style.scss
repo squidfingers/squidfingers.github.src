@@ -1,48 +1,3 @@
-@font-face {
-  font-family: 'Interface';
-  font-style:  normal;
-  font-weight: 400;
-  src: url("/fonts/Interface-Regular.woff2?v=1.1") format("woff2"),
-       url("/fonts/Interface-Regular.woff?v=1.1") format("woff");
-}
-//@font-face {
-//  font-family: 'Interface';
-//  font-style:  italic;
-//  font-weight: 400;
-//  src: url("/fonts/Interface-RegularItalic.woff2?v=1.1") format("woff2"),
-//       url("/fonts/Interface-RegularItalic.woff?v=1.1") format("woff");
-//}
-
-//@font-face {
-//  font-family: 'Interface';
-//  font-style:  normal;
-//  font-weight: 500;
-//  src: url("/fonts/Interface-Medium.woff2?v=1.1") format("woff2"),
-//       url("/fonts/Interface-Medium.woff?v=1.1") format("woff");
-//}
-//@font-face {
-//  font-family: 'Interface';
-//  font-style:  italic;
-//  font-weight: 500;
-//  src: url("/fonts/Interface-MediumItalic.woff2?v=1.1") format("woff2"),
-//       url("/fonts/Interface-MediumItalic.woff?v=1.1") format("woff");
-//}
-
-@font-face {
-  font-family: 'Interface';
-  font-style:  normal;
-  font-weight: 700;
-  src: url("/fonts/Interface-Bold.woff2?v=1.1") format("woff2"),
-       url("/fonts/Interface-Bold.woff?v=1.1") format("woff");
-}
-//@font-face {
-//  font-family: 'Interface';
-//  font-style:  italic;
-//  font-weight: 700;
-//  src: url("/fonts/Interface-BoldItalic.woff2?v=1.1") format("woff2"),
-//       url("/fonts/Interface-BoldItalic.woff?v=1.1") format("woff");
-//}
-
 html {
     box-sizing: border-box;
     font-size: 18px;
@@ -66,29 +21,29 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: spacer(1);
-    color: $header-color;
+    color: $text-color;
     font-family: $font-family-base;
     line-height: 1.1;
 }
 
 h1 {
     font-size: 2.5rem;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
 }
 
 h3 {
     font-size: 1.75rem;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
 }
 
 h4 {
     font-size: 1.5rem;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
 }
 
 h5 {
@@ -168,20 +123,20 @@ blockquote {
 pre {
     overflow: auto;
     padding: spacer(1);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: $code-bg-color;
 }
 
 code {
-    color: $white-50;
-    .str { color: $white-80; }  /* string content */
-    .kwd { color: $white-80; }  /* keyword */
-    .com { color: $white-80; }  /* comment */
-    .typ { color: $white-80; }  /* type name */
-    .lit { color: $white-80; }  /* literal value */
-    .pun { color: $white-80; }  /* punctuation */
-    .tag { color: $white-80; }  /* markup tag name */
-    .atn { color: $white-80; }  /* markup attribute name */
-    .atv { color: $white-80; }  /* markup attribute value */
-    .var { color: $secondary; } /* variable name */
-    .fun { color: $white-80; }  /* function name */
+    color: $code-text-color;
+    .str { color: $code-str-color; }
+    .kwd { color: $code-kwd-color; }
+    .com { color: $code-com-color; }
+    .typ { color: $code-typ-color; }
+    .lit { color: $code-lit-color; }
+    .pun { color: $code-pun-color; }
+    .tag { color: $code-tag-color; }
+    .atn { color: $code-atn-color; }
+    .atv { color: $code-atv-color; }
+    .var { color: $code-var-color; }
+    .fun { color: $code-fun-color; }
 }
