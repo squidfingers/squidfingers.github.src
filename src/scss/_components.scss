@@ -714,7 +714,12 @@ $toggle-menu-breakpoint: 'lg';
 
         img {
             @include make-responsive-img;
+            margin-bottom: spacer(0.5);
             border-bottom: solid 1px $neutral-400;
+        }
+        .legend {
+            color: $neutral-500;
+            font-size: $font-size-small;
         }
     }
 }
