@@ -313,7 +313,7 @@ $toggle-menu-breakpoint: 'lg';
 .menu-bar {// Element created by JavaScript
     // show menu bar on smaller breakpoints
     display: block;
-    padding: spacer(0.5);
+    padding: spacer(0.75);
     padding-left: spacer(1);
     background-color: $primary;
     a {
