@@ -17,7 +17,7 @@ $grid-breakpoints: (
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints);
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 // Grid containers
 //
@@ -39,3 +39,7 @@ $container-max-widths: (
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
+
+// Utilities
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
