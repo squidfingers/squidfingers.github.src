@@ -59,9 +59,11 @@
         {{ partial "latest_update" . }}
         {{ end }}
 
+        {{ if not (and (eq .Type "projects") (eq .Kind "page")) }}
         <div class="contact-btn">
             {{ partial "email_link" (dict "content" "<svg data-src=\"/img/ui/email.svg\"></svg>" ) }}
         </div>
+        {{ end }}
 
         <script type="text/javascript" src="/js/menu.js?v=20181117"></script>
         <script type="text/javascript" src="/js/svg-injector.min.js"></script>
