@@ -397,35 +397,24 @@ $toggle-menu-breakpoint: 'lg';
     padding-bottom: spacer(5);
 }
 
-/* Contact Button */
+/* Page Footer */
 
-.contact-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+.page-footer {
+    background-color: $primary;
 
+    .content {
+        @include make-col-ready;
+        padding-top: spacer(5);
+        padding-bottom: spacer(4);
+    }
+
+    h3 {
+        color: $neutral-200;
+        font-size: 3rem;
+    }
     a {
-        display: block;
-        padding: 1rem;
-        border-radius: 3rem;
-        background-color: $btn-bg-color;
-        border: solid 3px $neutral-300;
-        box-shadow: 0 1px 1px rgba($neutral-700, 0.3);
-        transition: background-color .1s ease-in-out;
-
-        &:hover {
-            background-color: $btn-bg-hover-color;
-        }
-    }
-
-    svg {
-        display: block;
-        width: 24px;
-        height: 24px;
-    }
-
-    path {
-        fill: $btn-text-color;
+        color: $neutral-200;
+        font-size: $font-size-large;
     }
 }
 
