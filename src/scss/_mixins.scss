@@ -76,5 +76,5 @@
 
 @mixin make-border {
     border: solid 1px $border-color;
-    box-shadow: 0 0 2px rgba(0,0,0,0.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.06);
 }
