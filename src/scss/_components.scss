@@ -765,8 +765,14 @@ $toggle-menu-breakpoint: 'lg';
             border-bottom: solid 1px $neutral-400;
         }
         .legend {
+            text-align: center;
             color: $neutral-500;
             font-size: $font-size-small;
+
+            span {
+                display: inline-block;
+                padding: 0 spacer(0.5) 0 spacer(0.5);
+            }
         }
     }
 }
