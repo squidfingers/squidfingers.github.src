@@ -1,0 +1,12 @@
+<div class="project-type illustration">
+    {{ if .IsHome }}
+    <h3>
+        Illustration
+    </h3>
+    {{ end }}
+    <div class="project-listing">
+        {{ range where .Pages "Section" "illustration" }}
+            {{ partial "project_link.html" . }}
+        {{ end }}
+    </div>
+</div>

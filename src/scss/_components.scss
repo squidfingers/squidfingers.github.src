@@ -536,7 +536,7 @@ $toggle-menu-breakpoint: 'lg';
 
 /* Project Listing */
 
-.project-category {
+.project-type {
     h3 {
         margin-bottom: spacer(5);
         padding-top: spacer(4);
@@ -589,7 +589,7 @@ $toggle-menu-breakpoint: 'lg';
         }
     }
 
-    &.featured {
+    &.latest-project {
         h3 {
             display: none;
         }
@@ -603,7 +603,7 @@ $toggle-menu-breakpoint: 'lg';
         }
     }
 
-    &.recent, &.archive, &.illustration {
+    &.recent-projects, &.archived-projects, &.illustration {
         .project-link {
             @include media-breakpoint-up(xs) {
                 @include make-col(6);
