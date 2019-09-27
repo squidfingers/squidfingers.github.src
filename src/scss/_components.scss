@@ -771,11 +771,13 @@ $toggle-menu-breakpoint: 'lg';
 
         img {
             @include make-responsive-img;
-            margin-bottom: spacer(0.5);
-            border-bottom: solid 1px $neutral-400;
+            margin-bottom: spacer(1);
         }
 
         .legend {
+            margin-bottom: 0;
+            padding-top: spacer(0.5);
+            border-top: solid 1px $neutral-400;
             text-align: center;
             color: $neutral-500;
             font-size: $font-size-small;

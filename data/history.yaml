@@ -1,8 +1,12 @@
 jobs:
+- name: "Buoyant"
+  title: "UX Designer"
+  description: ""
+  dateRange: "Oct 2019 &ndash; Present"
 - name: "Minted"
   title: "Senior UX Manager"
   description: "Leading UX for Minted Wedding Websites, along with other growth initiatives. Architect and design lead of the Minted Component Library. While at Minted, I have learned to carefully balance user needs and business goals to create products that are loved by our customers."
-  dateRange: "Feb 2015 &ndash; Present"
+  dateRange: "Feb 2015 &ndash; Oct 2019"
 - name: "Hitched Up"
   title: "Co-Founder/Designer"
   description: "Co-founded Hitched Up: the easiest, fastest way to build your wedding RSVP site. Hitched Up was acquired by the lovely folks over at Minted in 2015."
