@@ -1,11 +1,11 @@
 jobs:
 - name: "Buoyant"
   title: "UX Designer"
-  description: ""
+  description: "I recently took a new direction in my career to design the user experience for service mesh management."
   dateRange: "Oct 2019 &ndash; Present"
 - name: "Minted"
   title: "Senior UX Manager"
-  description: "Leading UX for Minted Wedding Websites, along with other growth initiatives. Architect and design lead of the Minted Component Library. While at Minted, I have learned to carefully balance user needs and business goals to create products that are loved by our customers."
+  description: "Led UX for Minted Wedding Websites, along with other online tools and growth initiatives. Architect and design lead of the Minted Component Library. While at Minted, I have learned to carefully balance user needs and business goals to create products that are loved by our customers."
   dateRange: "Feb 2015 &ndash; Oct 2019"
 - name: "Hitched Up"
   title: "Co-Founder/Designer"
