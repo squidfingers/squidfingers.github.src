@@ -1,7 +1,7 @@
 jobs:
 - name: "Buoyant"
   title: "UX Designer"
-  description: "I recently took a new direction in my career to design the user experience for service mesh management."
+  description: "Designing tools for service mesh management."
   dateRange: "Oct 2019 &ndash; Present"
 - name: "Minted"
   title: "Senior UX Manager"
@@ -9,7 +9,7 @@ jobs:
   dateRange: "Feb 2015 &ndash; Oct 2019"
 - name: "Hitched Up"
   title: "Co-Founder/Designer"
-  description: "Co-founded Hitched Up: the easiest, fastest way to build your wedding RSVP site. Hitched Up was acquired by the lovely folks over at Minted in 2015."
+  description: "Co-founded Hitched Up: the easiest, fastest way to build your wedding RSVP site. Hitched Up was acquired by Minted in 2015."
   dateRange: "April 2013 &ndash; July 2015"
 - name: "MMGY Global"
   title: "Associate Creative Director"
