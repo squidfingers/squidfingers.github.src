@@ -74,7 +74,7 @@
         padding: 0 0.6rem;
         border: solid 1px $neutral-400;
         color: $neutral-500;
-        border-radius: $font-size-small;
+        border-radius: $spacer;
         font-size: $font-size-small;
 
         a {
@@ -697,6 +697,21 @@ $toggle-menu-breakpoint: 'lg';
         @include media-breakpoint-up(lg) {
             @include make-col(8);
         }
+    }
+}
+
+.project-caption {
+    margin-bottom: $grid-gutter-width;
+    text-align: center;
+
+    p {
+        display: inline-block;
+        margin: 0;
+        padding: 0.2rem 1rem;
+        background-color: $neutral-500;
+        border-radius: $spacer;
+        color: #fff;
+        font-size: $font-size-small;
     }
 }
 
