@@ -5,7 +5,7 @@
     </h3>
     {{ end }}
     <div class="project-listing">
-        {{ range first 1 (where .Pages "Section" "recent-projects") }}
+        {{ range first 1 (where .Site.RegularPages "Section" "recent-projects") }}
             {{ partial "project_link.html" . }}
         {{ end }}
     </div>
@@ -17,7 +17,7 @@
     </h3>
     {{ end }}
     <div class="project-listing">
-        {{ range after 1 (where .Pages "Section" "recent-projects") }}
+        {{ range after 1 (where .Site.RegularPages "Section" "recent-projects") }}
             {{ partial "project_link.html" . }}
         {{ end }}
     </div>

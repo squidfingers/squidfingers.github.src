@@ -5,7 +5,7 @@
     </h3>
     {{ end }}
     <div class="project-listing">
-        {{ range where .Pages "Section" "illustration" }}
+        {{ range where .Site.RegularPages "Section" "illustration" }}
             {{ partial "project_link.html" . }}
         {{ end }}
     </div>
