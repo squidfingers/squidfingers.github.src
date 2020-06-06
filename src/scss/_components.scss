@@ -247,7 +247,7 @@ $toggle-menu-breakpoint: 'lg';
                 min-height: 50px;
                 background-image: url(/img/ui/logo.png);
                 background-repeat: no-repeat;
-                background-size: 50px 50px;
+                background-size: 50px 44px;
             }
         }
 
@@ -261,8 +261,8 @@ $toggle-menu-breakpoint: 'lg';
 
             a {// increase logo size
                 padding-left: 130px;
-                min-height: 100px;
-                background-size: 100px 100px;
+                min-height: 70px;
+                background-size: 80px 70px;
             }
         }
     }
