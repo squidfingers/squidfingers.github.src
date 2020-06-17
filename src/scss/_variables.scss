@@ -1,42 +1,42 @@
 // Colors
 
-$primary:                       #FF7D69;
+$primary:                       #000;
 
-$neutral-700:                   #222;
+$neutral-700:                   #000;
 $neutral-600:                   #575757;
-$neutral-500:                   #C7C6C5;
-$neutral-400:                   #E8E7E6;
-$neutral-300:                   #F9F8F7;
-$neutral-200:                   #FDFDFC;
+$neutral-500:                   #ABABAB;
+$neutral-400:                   #E6E6E6;
+$neutral-300:                   #F8F8F8;
+$neutral-200:                   #FCFCFC;
 
 $body-bg-color:                 $neutral-300;
 $text-color:                    $neutral-700;
 
 $link-color:                    $primary;
-$link-hover-color:              lighten($primary, 5%);
-$link-active-color:             lighten($primary, 10%);
+$link-hover-color:              lighten($primary, 10%);
+$link-active-color:             lighten($primary, 20%);
 
 $blockquote-bg-color:           $neutral-200;
 $blockquote-border-color:       $primary;
-$blockquote-footer-text-color:  $neutral-600;
+$blockquote-footer-text-color:  $neutral-700;
 
 $code-bg-color:                 $neutral-200;
-$code-text-color:               $neutral-600;
-$code-str-color:                $neutral-700;// string content
-$code-kwd-color:                $neutral-700;// keyword
-$code-com-color:                $neutral-700;// comment
-$code-typ-color:                $neutral-700;// type name
-$code-lit-color:                $neutral-700;// literal value
-$code-pun-color:                $neutral-700;// punctuation
-$code-tag-color:                $neutral-700;// markup tag name
-$code-atn-color:                $neutral-700;// markup attribute name
-$code-atv-color:                $neutral-700;// markup attribute value
-$code-var-color:                $primary;// variable name
-$code-fun-color:                $neutral-700;// function name
+$code-text-color:               $neutral-500;
+$code-str-color:                $neutral-600;// string content
+$code-kwd-color:                $neutral-600;// keyword
+$code-com-color:                $neutral-600;// comment
+$code-typ-color:                $neutral-600;// type name
+$code-lit-color:                $neutral-600;// literal value
+$code-pun-color:                $neutral-600;// punctuation
+$code-tag-color:                $neutral-600;// markup tag name
+$code-atn-color:                $neutral-600;// markup attribute name
+$code-atv-color:                $neutral-600;// markup attribute value
+$code-var-color:                $neutral-700;// variable name
+$code-fun-color:                $neutral-600;// function name
 
 $btn-bg-color:                  $primary;
-$btn-bg-hover-color:            lighten($primary, 5%);
-$btn-bg-active-color:           lighten($primary, 10%);
+$btn-bg-hover-color:            lighten($primary, 10%);
+$btn-bg-active-color:           lighten($primary, 20%);
 $btn-text-color:                $neutral-200;
 $btn-bg-color-disabled:         $neutral-500;
 $btn-text-color-disabled:       $neutral-200;
