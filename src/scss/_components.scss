@@ -772,6 +772,13 @@ $toggle-menu-breakpoint: 'lg';
         @include make-btn-block;
         font-size: $font-size-base;
     }
+    a.back {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     @include media-breakpoint-up(sm) {
         .next-project-btn {
             font-size: $font-size-large;
