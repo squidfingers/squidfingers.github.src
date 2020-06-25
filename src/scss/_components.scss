@@ -79,6 +79,11 @@
 
         a {
             color: $neutral-500;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -224,10 +229,10 @@ $toggle-menu-breakpoint: 'lg';
             justify-content: center;
             text-align: left;
             color: $neutral-700;
+            text-decoration: none;
 
             &:hover {
-                color: lighten($neutral-700, 5%);
-                text-decoration: none;
+                color: lighten($neutral-700, 20%);
             }
         }
 
@@ -291,14 +296,14 @@ $toggle-menu-breakpoint: 'lg';
             display: block;
             color: $neutral-500;
             text-align: center;
+            text-decoration: none;
 
             &:hover {
-                color: $neutral-400;
-                text-decoration: none;
+                color: lighten($neutral-500, 20%);
             }
 
             &.selected, &.selected:hover {
-                color: $neutral-200;
+                color: $neutral-500;
             }
         }
 
@@ -434,6 +439,11 @@ $toggle-menu-breakpoint: 'lg';
     a {
         color: $neutral-200;
         font-size: $font-size-large;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -463,6 +473,14 @@ $toggle-menu-breakpoint: 'lg';
     .date {
         margin-bottom: spacer(0.5);
         font-size: $font-size-small;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -483,6 +501,14 @@ $toggle-menu-breakpoint: 'lg';
             @include media-breakpoint-up(xl) {
                 @include make-col(8);
             }
+        }
+    }
+
+    a.more {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 
@@ -518,6 +544,11 @@ $toggle-menu-breakpoint: 'lg';
             padding: spacer(1) spacer(1.5);
             font-size: $font-size-large;
             text-align: center;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -580,6 +611,7 @@ $toggle-menu-breakpoint: 'lg';
 
             a {
                 display: block;
+                text-decoration: none;
 
                 &:hover + figcaption {
                     opacity: 1;

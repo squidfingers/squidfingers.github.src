@@ -24,6 +24,7 @@
     white-space: nowrap;
     vertical-align: middle;
     text-align: center;
+    text-decoration: none;
     font-family: $font-family-base;
     font-weight: $font-weight-normal;
     font-size: $font-size-base;
@@ -37,7 +38,6 @@
     &:hover {
         color: $btn-text-color;
         background-color: $btn-bg-hover-color;
-        text-decoration: none;
     }
 
     &:active {
