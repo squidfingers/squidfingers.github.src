@@ -78,12 +78,8 @@
         font-size: $font-size-small;
 
         a {
+            @include make-underline-on-hover;
             color: $neutral-500;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
 }
@@ -228,12 +224,8 @@ $toggle-menu-breakpoint: 'lg';
             flex-direction: column;
             justify-content: center;
             text-align: left;
-            color: $neutral-700;
+            color: $text-color;
             text-decoration: none;
-
-            &:hover {
-                color: lighten($neutral-700, 20%);
-            }
         }
 
         .name {
@@ -298,12 +290,8 @@ $toggle-menu-breakpoint: 'lg';
             text-align: center;
             text-decoration: none;
 
-            &:hover {
-                color: lighten($neutral-500, 20%);
-            }
-
             &.selected, &.selected:hover {
-                color: $neutral-500;
+                color: $neutral-200;
             }
         }
 
@@ -330,14 +318,14 @@ $toggle-menu-breakpoint: 'lg';
                 }
             }
             a {
-                color: $neutral-700;
+                color: $text-color;
 
                 &:hover {
-                    color: $neutral-600;
+                    border-bottom: solid 2px $neutral-400;
                 }
 
                 &.selected, &.selected:hover {
-                    color: $neutral-700;
+                    color: $text-color;
                     border-bottom: solid 2px $neutral-400;
                 }
             }
@@ -437,13 +425,9 @@ $toggle-menu-breakpoint: 'lg';
     }
 
     a {
+        @include make-underline-on-hover;
         color: $neutral-200;
         font-size: $font-size-large;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -475,11 +459,7 @@ $toggle-menu-breakpoint: 'lg';
         font-size: $font-size-small;
 
         a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
+            @include make-underline-on-hover;
         }
     }
 }
@@ -504,12 +484,8 @@ $toggle-menu-breakpoint: 'lg';
         }
     }
 
-    a.more {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+    .more {
+        @include make-underline-on-hover;
     }
 
     .done {
@@ -540,15 +516,11 @@ $toggle-menu-breakpoint: 'lg';
         @include make-col-ready;
 
         a {
+            @include make-underline-on-hover;
             display: block;
             padding: spacer(1) spacer(1.5);
             font-size: $font-size-large;
             text-align: center;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
 }
@@ -772,12 +744,8 @@ $toggle-menu-breakpoint: 'lg';
         @include make-btn-block;
         font-size: $font-size-base;
     }
-    a.back {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+    .back {
+        @include make-underline-on-hover;
     }
     @include media-breakpoint-up(sm) {
         .next-project-btn {
@@ -846,9 +814,6 @@ $toggle-menu-breakpoint: 'lg';
 
     .job-description {
         @include make-col-ready;
-
-        h2 {
-        }
 
         h3 {
             margin-bottom: 0.2rem;

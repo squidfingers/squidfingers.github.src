@@ -77,3 +77,11 @@
     border: solid 1px $border-color;
     box-shadow: 0 0 20px rgba(0,0,0,0.06);
 }
+
+@mixin make-underline-on-hover {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

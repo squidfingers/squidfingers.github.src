@@ -13,8 +13,8 @@ $body-bg-color:                 $neutral-300;
 $text-color:                    $neutral-700;
 
 $link-color:                    $primary;
-$link-hover-color:              lighten($primary, 20%);
-$link-active-color:             lighten($primary, 30%);
+$link-hover-color:              $primary;
+$link-active-color:             $primary;
 
 $blockquote-bg-color:           $neutral-200;
 $blockquote-border-color:       $primary;
@@ -36,7 +36,7 @@ $code-fun-color:                $neutral-600;// function name
 
 $btn-bg-color:                  $primary;
 $btn-bg-hover-color:            lighten($primary, 10%);
-$btn-bg-active-color:           lighten($primary, 20%);
+$btn-bg-active-color:           lighten($primary, 15%);
 $btn-text-color:                $neutral-200;
 $btn-bg-color-disabled:         $neutral-500;
 $btn-text-color-disabled:       $neutral-200;
