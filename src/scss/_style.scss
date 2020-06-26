@@ -56,9 +56,17 @@ h6 {
     font-weight: $font-weight-normal;
 }
 
-p, ul, ol {
+p, ul, ol, figure {
     margin-top: 0;
     margin-bottom: spacer(1);
+    color: $text-color;
+    font-family: $font-family-base;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+
+figcaption {
     color: $text-color;
     font-family: $font-family-base;
     font-weight: $font-weight-normal;
