@@ -583,7 +583,7 @@ $toggle-menu-breakpoint: 'lg';
             right: ($grid-gutter-width / 2);
             bottom: 0;
             left: ($grid-gutter-width / 2);
-            padding: 0 spacer(2);
+            padding: spacer(1) spacer(2);
             background-color: rgba($primary, 0.9);
             color: $neutral-200;
             opacity: .8;
