@@ -1,7 +1,7 @@
 jobs:
 - name: "Buoyant"
   title: "UX Designer"
-  description: "UX lead and system designer for Dive. Bringing human communication to Kubernetes service mesh."
+  description: "UX lead and system designer for Dive.co. Dive gives Kubernetes users visibility into microservice dependencies across multiple clusters, deploy monitoring and alerting, service level ojectives, and much more."
   dateRange: "Oct 2019 &ndash; Present"
 - name: "Minted"
   title: "Senior UX Manager"
