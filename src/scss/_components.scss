@@ -544,15 +544,15 @@ $toggle-menu-breakpoint: 'lg';
         @include media-breakpoint-up(sm) {
             margin-bottom: 0;
             font-size: $font-size-large;
+            font-weight: $font-weight-light;
         }
 
         @include media-breakpoint-up(md) {
-            @include make-col(10);
+            //@include make-col(10);
         }
 
         @include media-breakpoint-up(lg) {
             font-size: $font-size-jumbo;
-            font-weight: $font-weight-light;
         }
     }
 }
