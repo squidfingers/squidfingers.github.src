@@ -796,6 +796,11 @@ $toggle-menu-breakpoint: 'lg';
             @include make-col(8);
         }
     }
+    img {
+        display: block;
+        width: 200px;
+        margin: -(spacer(6)) auto spacer(2) auto;
+    }
     .about-summary,
     blockquote {
         margin-bottom: spacer(2);
