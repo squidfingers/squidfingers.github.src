@@ -234,8 +234,8 @@ $toggle-menu-breakpoint: 'lg';
         }
 
         .role {
+            @include make-base-text;
             color: $neutral-500;
-            font-size: $font-size-base;
         }
 
         @include media-breakpoint-up(sm) {
@@ -601,9 +601,9 @@ $toggle-menu-breakpoint: 'lg';
         text-align: center;
 
         span {
+            @include make-base-text;
             display: block;
             padding-top: 0.2rem;
-            font-size: $font-size-base;
         }
     }
 
@@ -700,8 +700,8 @@ $toggle-menu-breakpoint: 'lg';
         order: 1;
 
         h2 {
+            @include make-base-text;
             margin-bottom: 0.2rem;
-            font-size: $font-size-base;
         }
 
         h5 {
@@ -841,8 +841,8 @@ $toggle-menu-breakpoint: 'lg';
         @include make-col-ready;
 
         h3 {
+            @include make-base-text;
             margin-bottom: 0.2rem;
-            font-size: $font-size-base;
         }
 
         @include media-breakpoint-up(md) {
@@ -853,7 +853,7 @@ $toggle-menu-breakpoint: 'lg';
         @include make-col-ready;
 
         h5 {
-            font-size: $font-size-base;
+            @include make-base-text;
         }
 
         @include media-breakpoint-up(md) {
