@@ -60,8 +60,9 @@
         {{ partial "latest_update" . }}
         {{ end }}
 
-        {{ if not (and (or (eq .Type "recent-projects") (eq .Type "archived-projects")) (eq .Kind "page")) }}
-        {{/* Don't show footer on project pages */}}
+        {{/* Only show footer on home, about, and history */}}
+        {{ if (or .IsHome (eq .Type "about") (eq .Type "history")) }}
+        {{/* Just not on project pages -> if not (and (or (eq .Type "recent-projects") (eq .Type "archived-projects")) (eq .Kind "page")) */}}
         <div class="page-footer">
             <div class="container-fluid">
                 <div class="row">
