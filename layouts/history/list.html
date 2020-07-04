@@ -2,12 +2,12 @@
 
 <div class="timeline">
     <div class="content">
-        <img src="/img/history/timeline.png" alt="Timeline">
+        <img src="{{ .Params.timeline_src }}" alt="Timeline">
     </div>
 </div>
 
 <div class="jobs">
-    {{ range $.Site.Data.history.jobs }}
+    {{ range .Params.jobs }}
     <div class="job">
         <div class="job-description">
             <h3>

@@ -557,9 +557,9 @@ $toggle-menu-breakpoint: 'lg';
     }
 }
 
-/* Coming Soon */
+/* Upcoming Projects */
 
-.coming-soon {
+.upcoming-projects {
     @include make-row;
 
     .project {
@@ -664,7 +664,7 @@ $toggle-menu-breakpoint: 'lg';
     //    }
     //}
 
-    &.recent-projects, &.archived-projects {
+    &.recent-projects, &.archived-projects {// Exclude .latest-project
         .project-link {
             @include media-breakpoint-up(xs) {
                 @include make-col(6);

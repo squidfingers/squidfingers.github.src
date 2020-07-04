@@ -2,19 +2,12 @@
 
 <div class="introduction">
     <p class="content">
-        Howdy! I'm a digital designer from the Midwest, and I'm driven to make things people love to use. I have a passion for lean UX, learning from user behavior, creating scalable visual systems, and building for all devices.
+        {{ .Params.introduction }}
     </p>
 </div>
 
-<div class="coming-soon">
-    <figure class="project">
-        <img src="/img/projects/dive/tn.png" alt="Dive">
-        <figcaption>
-            I'm currently working on Dive, which is in private beta. Stay tuned.
-        </figcaption>
-    </figure>
-</div>
-
-{{ partial "projects" . }}
+{{ partial "upcoming_projects.html" . }}
+{{ partial "recent_projects.html" . }}
+{{ partial "archived_projects.html" . }}
 
 {{ end }}

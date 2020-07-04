@@ -8,7 +8,7 @@
         <title>{{ with .Title }}{{ . }} / {{ end }}{{ .Site.Title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;600&display=swap" rel="stylesheet">
-        <link href="/css/app.css?v=20200625" rel="stylesheet" type="text/css">
+        <link href="/css/app.css?v=20200703" rel="stylesheet" type="text/css">
         <link rel="icon" sizes="16x16 32x32 64x64" href="/img/icons/favicon-64.ico">
         <link rel="icon" type="image/png" href="/img/icons/favicon-196.png">
         <link rel="apple-touch-icon" href="/img/icons/favicon-152.png">
@@ -17,7 +17,7 @@
     </head>
     <body>
 
-        <header id="page-header" class="page-header{{ if and (or (eq .Type "recent-projects") (eq .Type "archived-projects") (eq .Type "illustration")) (eq .Kind "page") }} condensed{{ end }}">
+        <header id="page-header" class="page-header{{ if and (or (eq .Type "recent-projects") (eq .Type "archived-projects")) (eq .Kind "page") }} condensed{{ end }}">
             <div class="container-fluid">
                 <div class="row">
                     <div class="brand">
@@ -31,7 +31,7 @@
                     <nav id="main-nav" class="main-nav">
                         <ul>
                             <li>
-                                <a href="/"{{ if or .IsHome (eq .Type "recent-projects") (eq .Type "archived-projects") (eq .Type "illustration") }} class="selected"{{ end }}>Projects</a>
+                                <a href="/"{{ if or .IsHome (eq .Type "recent-projects") (eq .Type "archived-projects") }} class="selected"{{ end }}>Projects</a>
                             </li>
                             <li>
                                 <a href="/about/"{{ if eq .Type "about" }} class="selected"{{ end }}>About</a>
@@ -55,11 +55,12 @@
             </div>
         </main>
 
+        {{/* Placed outside of .page-main so it can be full width */}}
         {{ if .IsHome }}
         {{ partial "latest_update" . }}
         {{ end }}
 
-        {{ if not (and (or (eq .Type "recent-projects") (eq .Type "archived-projects") (eq .Type "illustration")) (eq .Kind "page")) }}
+        {{ if not (and (or (eq .Type "recent-projects") (eq .Type "archived-projects")) (eq .Kind "page")) }}
         {{/* Don't show footer on project pages */}}
         <div class="page-footer">
             <div class="container-fluid">
