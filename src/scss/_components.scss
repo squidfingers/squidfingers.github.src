@@ -586,8 +586,12 @@ $toggle-menu-breakpoint: 'lg';
             padding: spacer(1) spacer(2);
             background-color: rgba($black, 0.9);
             color: $gray-200;
-            opacity: .8;
+            opacity: .7;
             text-shadow: 0 0 6px $black;
+
+            @include media-breakpoint-up(sm) {
+                font-size: $font-size-large;
+            }
         }
     }
 }
