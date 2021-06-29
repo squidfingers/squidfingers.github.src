@@ -590,7 +590,7 @@ $toggle-menu-breakpoint: 'lg';
             text-shadow: 0 0 6px $black;
 
             @include media-breakpoint-up(sm) {
-                font-size: $font-size-large;
+                font-size: 1.3rem;// custom size so it fits nicely on tablet
             }
         }
     }
